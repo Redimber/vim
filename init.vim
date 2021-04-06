@@ -66,14 +66,6 @@ let g:ycm_auto_trigger=1
 let g:ycm_semantic_triggers = {
 \'c' : ['->', '    ', '.', ' ', '(', '[', '&'],
 \'cpp,objcpp' : ['->', '.', ' ', '(', '[', '&', '::'],
-\'perl' : ['->', '::', ' '],
-\'php' : ['->', '::', '.'],
-\'cs,java,javascript,d,vim,python,perl6,scala,vb,elixir,go' : ['.'],
-\'ruby' : ['.', '::'],
-\'lua' : ['.', ':'],
-\'scss,css': [ 're!^\s{2,4}', 're!:\s+' ],
-\'html': ['<', '"', '</', ' '],
-\'javascript': ['.', 're!(?=[a-zA-Z]{3,4})'],
 \}
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30 <CR>nnnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
