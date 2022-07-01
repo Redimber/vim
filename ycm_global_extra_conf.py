@@ -5,17 +5,8 @@ import logging
 import ycm_core
 import re
 
+
 BASE_FLAGS = [
-    '-Wall',
-    '-Wextra',
-    '-pedantic',
-    '-Wshadow',
-    '-Wformat=2',
-    '-Wfloat-equal',
-    '-Wconversion',
-    '-Wlogical-op',
-    '-Wcast-qual',
-    '-Wcast-align',
     '-std=c++17',
     '-x',
     'c++',
@@ -180,5 +171,6 @@ def Settings(**kwargs):
         return FlagsForCfamily(**kwargs)
     if language == 'python':
         # TODO
-        return {}
+        return {'interpreter_path': client_data[ 'g:ycm_python_interpreter_path' ],
+        'sys_path': client_data[ 'g:ycm_python_sys_path' ]}
     return {}
